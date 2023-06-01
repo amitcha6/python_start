@@ -25,14 +25,21 @@ def binsearch(arr,n,m):        # Defined binsearch method/function for executing
 
 from array import *
 arr = array('i',[])
-n = int(input("Hey user please the length of Array "))
-for i in range(n):
-    x = int(input("Enter the value in unsorted sorted form "))
-    arr.append(x)
-m=int(input("Enter the value to be searched "))
-sort(arr)
+try:
+    n = int(input("Hey user please the length of Array "))
+    for i in range(n):
+        x = int(input("Enter the value in unsorted sorted form "))
+        arr.append(x)
+    m=int(input("Enter the value to be searched "))
+    sort(arr)
 
-if binsearch(arr,n,m):
-    print("Found at ",pos+1)
-else:
-    print("Not found")
+    if binsearch(arr,n,m):
+        print("Found at ",pos+1)
+    else:
+        print("Not found")
+
+except ValueError as e:
+    print("Wrong Input Given, Please enter an Integer value")
+
+
+
